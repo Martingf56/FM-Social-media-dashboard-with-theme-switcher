@@ -1,7 +1,7 @@
 body ,html{
     font-family: "Inter", sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 3%;
 }
 
 body.light{
@@ -12,10 +12,90 @@ body.light{
 header{
     display: flex;
     flex-direction: column;
+    padding: 2% 1%;
 }
 
 header div.title{
-    width: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+span.title{
+    font-size: 20px;
+    font-weight: bold;
+    color: hsl(230, 17%, 14%);
+}
+
+span.total-followers{
+    font-weight: bold;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.separator-header{
+    margin-top: 20px;
+    border-top: 0.5px solid hsl(228, 12%, 44%);
+    width: 100%;
+}
+
+.type{
+    padding: 4% 0;
+    display: flex;
+    align-items: center;
+}
+
+.text-mode{
+    width: 90%;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.button-mode{
+    position: relative;
+    display: flex;
+}
+
+.button-span-mode{
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    background-color: hsl(230, 22%, 74%);
+    display: inline-block;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.button-span-mode::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+    display: block;
+}
+
+.button-input-mode{
+    z-index: 1;
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+.button-input-mode:checked +
+.button-span-mode {
+    content: "oey";
+}
+
+.button-input-mode:checked +
+.button-span-mode::after {
+    content: "ok";
+    margin-right: auto;
+    background-color: hsl(0, 0%, 100%); 
 }
 
 .social-media {
@@ -71,11 +151,11 @@ span.number-followers{
     color: hsl(230, 17%, 14%);
     margin-top: 10px;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 50px;
 }
 span.number-type{
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 3px;
 }
 span.trading{
@@ -84,20 +164,69 @@ span.trading{
     justify-content: center;
     font-weight: bold;
     font-size: 12px;
-    align-items: flex-end;
+    align-items: center;
 }
-span.trading.up{
+
+span.up{
     color:hsl(163, 72%, 41%);
 }
-span.trading.down{
+span.down{
     color: hsl(356, 69%, 56%);
 }
 
+.title-resume{
+    font-weight: bold;
+    margin-bottom: 25px;
+}
 
+.panel-resume{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+
+.card-resume{
+    padding: 4%;
+    border-radius: 6px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    background-color: hsl(227, 47%, 96%);
+}
+
+span.title-card{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+span.number-card{
+    color: hsl(230, 17%, 14%);
+    font-weight: bold;
+    font-size: 36px;
+}
+
+span.percentage-card{
+    font-size: small;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+span.icon-card{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
 
 @media(min-width:400px){
     .social-media{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 30px;
+    }
+
+    .panel-resume{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
