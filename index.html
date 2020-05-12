@@ -14,22 +14,41 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
   <link rel="stylesheet" href="style.css">
-  <style>
-    
-  </style>
+  <script>
+    function selectMode(){
+        var element = document.getElementById("checkbox");
+        if(element.checked != true)
+          toLightMode();
+        else
+          toDarkMode();
+    }
+
+    function toDarkMode(){
+      var listElements = document.getElementsByClassName("light");
+      let i;
+      for(i = 0; i < listElements.length; i++)
+        listElements[i].classList.add("dark");
+      
+    }
+    function toLightMode(){
+      var listElements = document.getElementsByClassName("dark");
+      while(listElements != null)
+        listElements[0].classList.remove("dark"); 
+    }
+  </script>
 </head>
 <body class="light">
   
   <header>
     <div class="title">
-      <span class="title">Social Media Dashboard</span>
+      <span class="title light">Social Media Dashboard</span>
       <span class="total-followers">Total Followers: 23,004</span> 
     </div>
     <div class="separator-header"></div>
     <div class="type">
       <span class="text-mode">Dark Mode</span>
       <div class="button-mode">
-        <input class="button-input-mode" type="checkbox"/> 
+        <input id="checkbox" class="button-input-mode" type="checkbox" onclick="selectMode()" /> 
         <span class="button-span-mode"></span>
       </div>
     </div>
@@ -42,7 +61,7 @@
           <img alt="facebook icon" class="icon-media" src="./images/icon-facebook.svg">
            @nathanf
         </span> 
-        <span class="number-followers">1987</span>
+        <span class="number-followers light">1987</span>
         <span class="number-type">Followers</span>
         <span class="trading up">&#9652; 12 Today</span> 
         </div>
@@ -53,7 +72,7 @@
           <img alt="twitter icon" class="icon-media" src="./images/icon-twitter.svg">
           @nathanf
         </span> 
-        <span class="number-followers">1044</span>
+        <span class="number-followers light">1044</span>
         <span class="number-type">Followers</span>
         <span class="trading up">&#9652; 99 Today</span> 
       </div>
@@ -63,7 +82,7 @@
           <span class="nickname">
             <img alt="instagram icon" class="icon-media" src="./images/icon-instagram.svg">
             @realnathanf</span> 
-          <span class="number-followers">11k</span>
+          <span class="number-followers light">11k</span>
           <span class="number-type">Followers</span>
           <span class="trading up">&#9652; 1099 Today</span> 
         </div>
@@ -75,7 +94,7 @@
             <img alt="yputube icon" class="icon-media" src="./images/icon-youtube.svg">
              Nathan F.
           </span> 
-          <span class="number-followers">8239</span>
+          <span class="number-followers light">8239</span>
           <span class="number-type">Subscribers</span>
           <span class="trading down">&#9662; 144 Today</span>
         </div>
@@ -88,62 +107,62 @@
       Overview - Today
     </div>
     <div class="panel-resume">
-      <div class="card-resume">
+      <div class="card-resume light">
         <span class="title-card">Page Views</span>
         <span class="icon-card"><img alt="facebook icon" src="./images/icon-facebook.svg"></span>
-        <span class="number-card">  87</span>
+        <span class="number-card light">  87</span>
         <span class="percentage-card up">&#9652; 3%</span>
       </div>
-      <div class="card-resume">
+      <div class="card-resume light light">
         <span class="title-card">Likes</span>
         <span class="icon-card"><img alt="facebook icon" src="./images/icon-facebook.svg"></span>
-        <span class="number-card">52</span>
+        <span class="number-card light">52</span>
         <span class="percentage-card down">&#9662; 2%</span>
       </div>
-      <div class="card-resume">
+      <div class="card-resume light">
         <span class="title-card">Likes</span>
         <span class="icon-card">
           <img alt="instagram icon" src="./images/icon-instagram.svg">
         </span>
-        <span class="number-card">5462</span>
+        <span class="number-card light">5462</span>
         <span class="percentage-card up">&#9652; 2257%</span>
       </div>
-      <div class="card-resume">
+      <div class="card-resume light">
         <span class="title-card">Profile Views</span>
         <span class="icon-card">
           <img alt="instagram icon" src="./images/icon-instagram.svg">
         </span>
-        <span class="number-card">52k</span>
+        <span class="number-card light">52k</span>
         <span class="percentage-card up">&#9652; 1375%</span>
       </div>
-      <div class="card-resume">
+      <div class="card-resume light">
         <span class="title-card">Retweets</span>
         <span class="icon-card">
           <img alt="twitter icon" src="./images/icon-twitter.svg">
         </span>
-        <span class="number-card">117</span>
+        <span class="number-card light">117</span>
         <span class="percentage-card up">&#9652; 303%</span>
       </div>
-      <div class="card-resume">
+      <div class="card-resume light">
         <span class="title-card">Likes</span>
         <span class="icon-card">
           <img alt="twitter icon" src="./images/icon-twitter.svg">
         </span>
-        <span class="number-card">507</span>
+        <span class="number-card light">507</span>
         <span class="percentage-card up">&#9652; 553%</span>
       </div>
-      <div class="card-resume">
+      <div class="card-resume light">
         <span class="title-card">Likes</span>
         <span class="icon-card"> <img alt="yputube icon"  src="./images/icon-youtube.svg">
         </span>
-        <span class="number-card">107</span>
+        <span class="number-card light">107</span>
         <span class="percentage-card down">&#9662; 19%</span>
       </div>
-      <div class="card-resume">
+      <div class="card-resume light">
         <span class="title-card"> Total Views</span>
         <span class="icon-card"> <img alt="yputube icon" src="./images/icon-youtube.svg">
         </span>
-        <span class="number-card">1407</span>
+        <span class="number-card light light">1407</span>
         <span class="percentage-card down">&#9652; 12%</span>
       </div>
     </div>

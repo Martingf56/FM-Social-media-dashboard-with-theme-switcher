@@ -9,6 +9,11 @@ body.light{
     color: hsl(228, 12%, 44%);
 }
 
+body.dark{
+    background-color:hsl(230, 17%, 14%);
+    color: hsl(228, 34%, 66%);
+}
+
 header{
     display: flex;
     flex-direction: column;
@@ -21,10 +26,15 @@ header div.title{
     flex-direction: column;
 }
 
-span.title{
+header span.title{
     font-size: 20px;
     font-weight: bold;
+}
+header span.title.light{
     color: hsl(230, 17%, 14%);
+}
+header span.title.dark{
+    color: hsl(0, 0%, 100%);
 }
 
 span.total-followers{
@@ -135,6 +145,10 @@ span.total-followers{
 .social-block.light{
     background-color: hsl(227, 47%, 96%);
 }
+.social-block.dark{
+    background-color: hsl(228, 28%, 20%);
+}
+
 
 span.nickname{
     display: flex;
@@ -148,11 +162,18 @@ span.nickname{
     margin-right: 7px;
 }
 span.number-followers{
-    color: hsl(230, 17%, 14%);
     margin-top: 10px;
     font-weight: 700;
     font-size: 50px;
 }
+span.number-followers.light{
+    color: hsl(230, 17%, 14%);
+}
+span.number-followers.dark{
+    color: hsl(0, 0%, 100%);
+}
+
+
 span.number-type{
     text-transform: uppercase;
     font-size: 13px;
@@ -193,7 +214,12 @@ span.down{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+}
+.card-resume.light{
     background-color: hsl(227, 47%, 96%);
+}
+.card-resume.dark{
+    background-color: hsl(228, 28%, 20%);
 }
 
 span.title-card{
@@ -202,9 +228,14 @@ span.title-card{
 }
 
 span.number-card{
-    color: hsl(230, 17%, 14%);
     font-weight: bold;
     font-size: 36px;
+}
+span.number-card.light{
+    color: hsl(230, 17%, 14%);
+}
+span.number-card.dark{
+    color: hsl(0, 0%, 100%);
 }
 
 span.percentage-card{
