@@ -295,6 +295,7 @@ footer .attributiion{
     }
 
     .type{
+        margin-top: 0;
         width: 20%;
         align-items: center;
         justify-content: end;
@@ -312,7 +313,7 @@ footer .attributiion{
         height: 25px;
         width: 25px;
         right: 5px;
-        bottom: 2.75px;
+        bottom: 2.55px;
     }
     #checkbox:checked + .button-switch:before {
         -webkit-transform: translateX(-26px);
