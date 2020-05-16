@@ -97,7 +97,7 @@ span.total-followers{
     height: 20px;
     width: 20px;
     left: 4px;
-    bottom: 2.75px;
+    bottom: 2.65px;
     background-color: hsl(230, 17%, 14%);
     -webkit-transition: .4s;
     transition: .4s;
@@ -313,8 +313,8 @@ footer .attributiion{
     .button-mode .button-switch:before {
         height: 25px;
         width: 25px;
-        right: 5px;
-        bottom: 2.55px;
+        left: 4px;
+        bottom: 3px;
     }
     #checkbox:checked + .button-switch:before {
         -webkit-transform: translateX(26px);
